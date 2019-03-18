@@ -1,4 +1,4 @@
-console.log("Hello");
+// ćwiczenia podstawy 2
 
 var n = 5; 
 var stars="";
