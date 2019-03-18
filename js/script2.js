@@ -13,11 +13,11 @@ if(i==0 || i==n-1){
 	}else{
 	
 	for(let j = 0; j<n; j++){
-	if(i==0 || i==n-1){
+	if(j==0 || j==n-1){
 		stars+="*"
 	}else{
 		
-		stars+=""
+		stars+=" "
 	}
 		
 	}
