@@ -1,3 +1,6 @@
+
+// Powtórka podstawy
+
 console.log('Hello world');
 
 console.log(typeof(4));
