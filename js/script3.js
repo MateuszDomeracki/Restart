@@ -21,99 +21,31 @@ var rentCostDays = a =>{
 
 // papier/kamień/nożyce
 
-var rock = (a,b)=>{
-		
-	
-	switch(a,b){
-		
-	case "papier","kamień":
-	case "nożyce","papier":
-	case "kamień","nożyce" :	
-		console.log( "Uzytkownik 1 wygral");
-		break;
-		
-	case "kamień","papier":
-	case "papier","nożyce" :
-	case "nożyce", "kamień" :
-		console.log( "Uzytkownik 2 wygral");
-		break;	
-		
-	default:	
-		"Podaj poprawną wartość"	
-		}
-		
-}
 
-
-//rock (prompt("uzytkownik1"), prompt("Użytkownik 2"));
 
 // Calculate tip amount
+	
+	
+var check = (amount,rating)=> {
 
-
-var calculateTipAmount = (amount,rating) =>{
-	
-	
-
-	var rate = ["Bardzo dobra obsługa","Dobra obsługa", "Średnia o obsługa", "Zła obsługa"]
-	var tip ;
-	
-	
-	if(rate.indexOf(rating)=== -1){
-		console.log("Podaj poprawny opis")
-	}
-	
-	if(rating=="Bardzo dobra obsługa"){
-		tip = amount * 0.25;
-		return  tip
-	}else if(rating == "Dobra obsługa"){
-		tip = amount * 0.20;
-		return tip;
-	}else if(rating == "Średnia obsługa"){
-		tip = amount * 0.10;
-		return tip;
-	}else{
-		tip= 0;
-		return tip;
-	}
-		
+    switch (rating){
+        case "Bardzo dobra obługa" :
+            return tip=amount*0.25;
+        case "Dobra obsługa" :
+            return tip= amount*0.20;
+        case "Średnia obsługa" :
+            return tip=amount*0.15;
+        case "Zła obsługa" :
+            return tip= amount*0;
+        default  :
+            return "Opis nieczytelny";
+    }
 }
+console.log(check(480,"Bardzo dobra obługa"));
 
-/*
 
-var calculateTipAmount = (amount,rating) =>{
-	
-	var tip=0;
-	
-	
-	switch (rating) {
-		
-	case "Bardzo dobra obsługa":
-		tip = amount * 0.25;
-		return tip;
-		break;
-	
-	case "Dobra obsługa" :
-		tip = amount * 0.20;
-		return tip;
-		break;
-		
-	case "Średnia obsługa" :
-		tip = amount * 0.10;
-		return tip;
-		break;
-	case "Średnia obsługa" :
-		tip =0;
-		return tip;	
-		break;
-		
-	default:
-		"Podaj poprawną wartość"
-	}
-	
-	
-}
 
-*/
+
 
 // Parzyste.nieparzyste
 
