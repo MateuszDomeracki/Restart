@@ -78,7 +78,42 @@ var calculateTipAmount = (amount,rating) =>{
 		
 }
 
+/*
 
+var calculateTipAmount = (amount,rating) =>{
+	
+	var tip=0;
+	
+	
+	switch (rating) {
+		
+	case "Bardzo dobra obsługa":
+		tip = amount * 0.25;
+		return tip;
+		break;
+	
+	case "Dobra obsługa" :
+		tip = amount * 0.20;
+		return tip;
+		break;
+		
+	case "Średnia obsługa" :
+		tip = amount * 0.10;
+		return tip;
+		break;
+	case "Średnia obsługa" :
+		tip =0;
+		return tip;	
+		break;
+		
+	default:
+		"Podaj poprawną wartość"
+	}
+	
+	
+}
+
+*/
 
 // Parzyste.nieparzyste
 
