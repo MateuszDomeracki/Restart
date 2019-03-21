@@ -1,3 +1,82 @@
+
+
+//Kalkulator
+
+function Calculator(){
+	this.operations =[];
+	this.counter=0;
+	
+	this.addNum = function (num1,num2){
+		
+		var result = num1+num2;
+		this.operations[this.counter]= "Dodano do siebie " + num1 +" i " + num2 + " ,otrzymano wynik "+ result; 
+		this.counter++;
+		return result;
+	},
+	
+	this.multiple = function(num1,num2){
+		var result = num1*num2;
+		this.operations[this.counter]= "Pomnozono " + num1 +" i " + num2 + " ,otrzymano wynik "+ result; 
+		this.counter++;
+		return result;
+	},
+	
+	this.substract = function(num1,num2){
+		var result = num1-num2;
+		this.operations[this.counter]= "Od " + num1 +" odjeto " + num2 + " ,otrzymano wynik "+ result;
+		this.counter++;
+		return result;
+		
+	},
+	this.divide = function(num1,num2){
+		var result = num1/num2;
+		this.operations[this.counter]= "Podzielono " + num1 +" przez " + num2 + " ,otrzymano wynik "+ result;
+		this.counter++;
+		return result;
+		
+	},
+	
+	this.showOperations = function (){
+		
+		return this.operations;
+	},
+	
+	this.clearMemory = function(){
+		this.operations=[];
+		
+	}
+}
+
+var calc = new Calculator();
+
+
+// Koszyk zakupów
+
+function Basket(){
+	
+	this.products = [];
+	this.price=0;
+	
+	this.addProducts = function(product,price){
+		this.products+=product;
+		this.price+=price;
+	}
+	this.showBasket = function(){
+		console.log(this.products, this.price );
+	}
+}
+
+var bil	 = new Basket();
+bil.addProducts("kiwi",60);	
+
+
+var ben = new Basket();
+ben.addProducts("banana",20);
+ben.addProducts(", rice", 10);
+ben.addProducts(", grzyby mun",50);
+ben.addProducts(", tofu",20);
+
+
 var tab = [
 [11, 12],
 [42, 2],
@@ -171,25 +250,7 @@ var stairs = {
 	
 }
 
-function Basket(){
-	
-	this.products = [];
-	this.price=0;
-	
-	this.addProducts = function(product,price){
-		this.products=product;
-		this.price+=price;
-	}
-	this.showBasket = function(){
-		console.log(this.products , this.price);
-	}
-}
 
-
-var ben = new Basket();
-
-ben.addProducts("banana",20);
-ben.showBasket;
 
 
 
